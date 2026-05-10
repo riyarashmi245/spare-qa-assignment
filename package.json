@@ -1,0 +1,22 @@
+{
+  "name": "spare-assignment",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test:e2e": "playwright test tests/e2e",
+    "test:e2e:headed": "playwright test tests/e2e --headed",
+    "test:api": "bun test tests/api",
+    "test:all": "bun run test:api && bun run test:e2e",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/bun": "latest",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  }
+}
